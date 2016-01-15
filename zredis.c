@@ -32,8 +32,6 @@
 #include "zend_exceptions.h"
 #include "zend_interfaces.h"
 
-#include <hiredis.h>
-
 static zend_object_handlers zredis_obj_handlers;
 static zend_class_entry *zredis_ce;
 static zend_class_entry *zredis_exception_ce;
