@@ -1,7 +1,7 @@
 # zredis
 redis extension for php7
 
-[![Build Status](https://secure.travis-ci.org/recoye/zredis.svg?branch=master)](http://travis-ci.org/reoye/zredis)
+[![Build Status](https://secure.travis-ci.org/recoye/zredis.svg?branch=master)](http://travis-ci.org/recoye/zredis)
 
 # 编译hiredis（可省略）
 ~~~
