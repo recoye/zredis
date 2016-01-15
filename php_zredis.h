@@ -24,7 +24,7 @@
 
 #define PHP_ZREDIS_VERSION "0.1"
 
-#include <hiredis.h>
+#include "hiredis/hiredis.h"
 
 typedef struct {
 #if PHP_MAJOR_VERSION < 7
