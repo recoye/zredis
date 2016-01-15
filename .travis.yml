@@ -12,7 +12,7 @@ php:
   - 7.0
 
 notifications:
-  email: mail@recoye.com
+  email: false 
    
 #Compile
 before_script:
