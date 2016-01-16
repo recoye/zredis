@@ -3,27 +3,18 @@ redis extension for php7
 
 [![Build Status](https://secure.travis-ci.org/recoye/zredis.svg?branch=master)](http://travis-ci.org/recoye/zredis)
 
-# 编译hiredis（可省略）
-~~~
-  0) git clone https://github.com/redis/hiredis
-  
-  1) make
-  
-  2) make install
-~~~
-# 导出项目
-导出项目带hiredis（如果不单独编译hiredis，一定要下面的方式拉项目)
-
+# checkout source
 ~~~
 git clone --recursive https://github.com/shenzhe/hiredis
 ~~~
 
-如果已经编译或者要单独编译hiredis的，可以直接clone，如下：
+or 
 
 ~~~
 git clone https://github.com/shenzhe/hiredis
+git submodule update --init
 ~~~
-# 编译扩展
+# compile && install
 ~~~
 
   phpize
@@ -34,21 +25,21 @@ git clone https://github.com/shenzhe/hiredis
   
   make install
   
-  把zrediso.so 加入 php.ini
+  enable zrediso.so in php.ini(extension=zredis.so)
   ~~~
   
 #demo
   ```php
     $redis = new zredis();
-    $redis->connect();    //tcp方式，默认 127.0.0.1:6379
-    //$redis->connect('/tmp/redis.sock');  //unix socket方式连接
-    //$redis->connect('127.0.0.1', 6379, 3); //指定ip和端口，第三个参数是连接超时时间
-    //$redis->pconnect();    //持久连接tcp方式，默认 127.0.0.1:6379
-    //$redis->pconnect('/tmp/redis.sock');  //持久连接unix socket方式连接
-    //$redis->pconnect('127.0.0.1', 6379, 3); //持久连接指定ip和端口，第三个参数是连接超时时间
-    $redis->set("key", $val);  //redis指令参考：http://redis.io/commands
+    $redis->connect();    //tcp， 127.0.0.1:6379
+    //$redis->connect('/tmp/redis.sock');  //unix socket
+    //$redis->connect('127.0.0.1', 6379, 3); //args: ip, prot, timeout
+    //$redis->pconnect();    // persistent connection,default: 127.0.0.1:6379
+    //$redis->pconnect('/tmp/redis.sock');  //unix sockett, persistent connection,
+    //$redis->pconnect('127.0.0.1', 6379, 3); //persistent connection, args:ip, port, timeout
+    $redis->set("key", $val);  //command：http://redis.io/commands
     echo $redis->get("key");
-    $redis->close();   //关闭连接
+    $redis->close();   //close
   ```
   
   
