@@ -5,13 +5,13 @@ redis extension for php7
 
 # checkout source
 ~~~
-git clone --recursive https://github.com/shenzhe/hiredis
+git clone --recursive https://github.com/recoye/zredis
 ~~~
 
 or 
 
 ~~~
-git clone https://github.com/shenzhe/hiredis
+git clone https://github.com/recoye/zredis
 git submodule update --init
 ~~~
 # compile && install
