@@ -2,6 +2,7 @@
 redis extension for php7
 
 [![Build Status](https://secure.travis-ci.org/recoye/zredis.svg?branch=master)](http://travis-ci.org/recoye/zredis)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](http://gabrielrcouto.mit-license.org/)
 
 # checkout source
 ~~~
